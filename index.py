@@ -2,7 +2,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
-from app import app
+from app import app, server
 from apps import _01_landing_page # ,_02_location
 
 
