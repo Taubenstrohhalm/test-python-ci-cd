@@ -2,16 +2,15 @@ import dash
 import dash_html_components as html
 import dash_core_components as dcc
 
-from app import app
+#from app import app
 
 
 layout = html.Div(children=[
-    html.H1(children='Welcome to REhome'),
+    html.H1(children='Choose Location'),
 
     html.Div(children='''
-        An awesome webapp that lets you explore the carbondioxide emissions of buildings.
+        The location is needed to find information about the climate in your region.
     '''),
-    dcc.Link(href="/apps/_02_location")
 ])
 
 if __name__ == '__main__':
