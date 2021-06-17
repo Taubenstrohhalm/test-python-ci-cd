@@ -11,7 +11,7 @@ layout = html.Div(children=[
     html.Div(children='''
         An awesome webapp that lets you explore the carbondioxide emissions of buildings.
     '''),
-    dcc.Link(href="/apps/_02_location")
+    dcc.Link(href="/apps/location")
 ])
 
 if __name__ == '__main__':
