@@ -1,5 +1,5 @@
 import unittest
-from rehome.building import physics
+from webapp.models.building import physics
 
 class TestBuildingPhysics(unittest.TestCase):
     def test_transmission(self):
