@@ -7,6 +7,8 @@ from app import app
 
 from model.building import location
 
+# VIEW
+
 layout = html.Div(children=[
     html.H1(children='Choose Location'),
 
@@ -18,19 +20,22 @@ layout = html.Div(children=[
     html.Div(id='location_output',children='')
 ])
 
+
+# CONTROLLER
+
 @app.callback(
     Output('location_output','children'),
     Input('submit_button','n_clicks'),
     State('input','value')
 )
-def show_latlong(n_clicks, value):
+def show_city(n_clicks, value):
     if n_clicks == 0:
         return ''
     loc = location.conv_zip_to_location(value)
     if loc == None:
         return f'Sorry we could not set up a building for that location.'
     city = loc['city']
-    return f'Your building will be placed in: {city}.'
+    return f'Your building will be placed in {city}.'
 
 if __name__ == '__main__':
     app.run_server(debug=True)

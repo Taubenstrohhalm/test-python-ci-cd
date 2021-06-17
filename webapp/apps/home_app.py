@@ -4,6 +4,8 @@ import dash_core_components as dcc
 
 from app import app
 
+# VIEW
+
 layout = html.Div(children=[
     html.H1(children='Welcome to REhome'),
 

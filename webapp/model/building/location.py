@@ -19,4 +19,4 @@ def conv_zip_to_location(zip):
 
 if __name__ == "__main__":
     loc = conv_zip_to_location(79271)
-    print(type(loc))
+    print(loc)
