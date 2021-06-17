@@ -3,7 +3,8 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 from app import app, server
-from apps import home_app  ,location_app
+from views import home_view  ,location_view
+from controllers import location_controller
 
 
 app.layout = html.Div([
@@ -16,9 +17,9 @@ app.layout = html.Div([
               Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == '/':
-        return home_app.layout
-    elif pathname == '/apps/location_app':
-        return location_app.layout
+        return home_view.layout
+    elif pathname == '/views/location_view':
+        return location_view.layout
     else:
         return '404'
 

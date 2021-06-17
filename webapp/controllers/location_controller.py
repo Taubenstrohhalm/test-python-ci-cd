@@ -5,20 +5,9 @@ from dash.dependencies import Input, Output, State
 
 from app import app
 
-from model.building import location
 
-# VIEW
-
-layout = html.Div(children=[
-    html.H1(children='Choose Location'),
-
-    html.Div(children='''
-        Please enter your post code.
-    '''),
-    dcc.Input(id="input", type="text", placeholder="Enter post code", value = ''),
-    html.Button(children = 'Submit', id="submit_button", n_clicks=0),
-    html.Div(id='location_output',children='')
-])
+from models.building import location
+#from models.building import weather
 
 # CONTROLLER
 
@@ -34,6 +23,7 @@ def show_city(n_clicks, value):
     if loc == None:
         return f'Sorry we could not set up a building for that location.'
     city = loc['city']
+    #data = weather.get_weather(loc)
     return f'Your building will be placed in {city}.'
 
 if __name__ == '__main__':
