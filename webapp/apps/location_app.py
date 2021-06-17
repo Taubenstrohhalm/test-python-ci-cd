@@ -20,7 +20,6 @@ layout = html.Div(children=[
     html.Div(id='location_output',children='')
 ])
 
-
 # CONTROLLER
 
 @app.callback(
