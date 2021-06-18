@@ -51,7 +51,7 @@ def infAndVent(n, volume, tempIn, tempAmb):
 
     .. math::
 
-        \dot{Q} = n \cdot V \cdot \rho \cdot \c_{P,air} \cdot (T_{in} - T_{amb})
+        \dot{Q} = n \cdot V \cdot \rho \cdot c_{P,air} \cdot (T_{in} - T_{amb})
 
     :param n: Ventilation/Infiltration rate :math:`n` [1/h]
     :type n: float
