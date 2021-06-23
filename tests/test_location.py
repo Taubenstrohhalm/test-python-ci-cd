@@ -1,5 +1,5 @@
 import unittest
-from webapp.models.building import location
+from WebApp.models.building import location
 
 class TestLocation(unittest.TestCase):
     def test_conv_zip_to_location(self):

@@ -31,7 +31,7 @@ def solarGains(gValue, area, irrad):
 
     .. math::
 
-        \{Q} = g \cdot A \cdot G_{n}
+        Q = g \cdot A \cdot G_n
 
     :param gValue: Solar heat gain coefficient :math:`g` [-]
     :type gValue: float
@@ -47,7 +47,7 @@ def solarGains(gValue, area, irrad):
     return heatFlow
 
 def infAndVent(n, volume, tempIn, tempAmb):
-    '''Calculate the infiltration and/or ventilation losses of a volume.
+    r'''Calculate the infiltration and/or ventilation losses of a volume.
 
     .. math::
 
@@ -73,7 +73,7 @@ def energyBalance(gains = [], losses = []):
 
     .. math::
 
-        Q = \sum{Q_{loss} - \sum{Q_{gain}}}
+        Q = \sum{Q_{loss} - \sum{Q_{gain}}} 
 
     :param gains: All heat gains of the building. [Wh]
     :type gains: list (float)

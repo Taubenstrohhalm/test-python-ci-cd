@@ -5,7 +5,6 @@ from dash.dependencies import Input, Output, State
 
 from app import app
 
-
 from models.building import location
 #from models.building import weather
 
@@ -25,6 +24,3 @@ def show_city(n_clicks, value):
     city = loc['city']
     #data = weather.get_weather(loc)
     return f'Your building will be placed in {city}.'
-
-if __name__ == '__main__':
-    app.run_server(debug=True)

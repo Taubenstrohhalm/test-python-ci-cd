@@ -1,11 +1,21 @@
 from geopy.geocoders import Nominatim
 
 def conv_zip_to_location(zip):
-    '''
+    """
     Convert postcode (zip) into information about the location.
-    If no information can be found returns None.
-    Otherwise dict with city, latitude and longitude will be returned.
-    '''
+
+    Parameters
+    ----------
+    zip : `str`
+        Postcode 
+        
+    Returns
+    -------
+    Dictionary or None
+        Dictionary with city, latitude and longitude will be returned.
+        If no information for the zip can be found returns None.
+
+    """
     geolocator = Nominatim(user_agent="rehome")
     loc = geolocator.geocode({"postalcode":zip})
     if loc == None:

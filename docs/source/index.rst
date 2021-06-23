@@ -11,14 +11,8 @@ Welcome to REhome's documentation!
    :caption: Contents:
 
    Introduction
-   WebApp
+   building.physics
 
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
